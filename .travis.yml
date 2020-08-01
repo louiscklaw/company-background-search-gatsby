@@ -6,9 +6,6 @@
 os: linux
 language: node_js
 
-script:
-  - echo "helloworld"
-
 jobs:
   include:
     - stage: Build
