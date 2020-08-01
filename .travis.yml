@@ -13,7 +13,8 @@ jobs:
     - stage: Build
 
       before_script:
-        - sudo apt install --no-install-recommends yarn
+        - apt update
+        - sudo apt-get install --no-install-recommends yarn
         - yarn --version
 
       script:
