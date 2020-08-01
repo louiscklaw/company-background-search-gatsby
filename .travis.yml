@@ -10,6 +10,11 @@ script:
 
 jobs:
   include:
+    - stage: Build
+      script:
+        - yarn
+        - yarn build
+
     - stage: Merge
       if: branch != master
       script:
@@ -19,7 +24,7 @@ jobs:
 
     - stage: Publish_dashboard
       name: Update travis build dashboard
-      if: branch = master
+      # if: branch = master
 
       script: skip
 
