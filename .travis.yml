@@ -12,8 +12,8 @@ jobs:
   include:
     - stage: Build
       script:
-        - yarn
-        - yarn build
+        - npm install -d
+        - npm run build
 
     - stage: Merge
       if: branch != master
