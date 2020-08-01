@@ -11,9 +11,14 @@ script:
 jobs:
   include:
     - stage: Build
+
+      before_script:
+        - sudo apt install --no-install-recommends yarn
+        - yarn --version
+
       script:
-        - npm install -d
-        - npm run build
+        - yarn
+        - yarn build
 
     - stage: Merge
       if: branch != master
